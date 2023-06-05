@@ -1,0 +1,79 @@
+.container {
+    text-align: center;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+    color: #fff;
+  }
+  
+  .greeting {
+    margin-top: 20px;
+  }
+  
+  h2 {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 16px;
+    color: #888;
+    margin-bottom: 10px;
+  }
+  
+  iframe {
+    max-width: 80%;
+    margin: 20px 0;
+    width: calc(66vw); /* Adjust the margin value if needed */
+    height: calc(60vw * 0.60); /* Adjust the aspect ratio if needed */
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  
+
+
+
+
+  .legend {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.legend-bar {
+  width: 200px; /* Adjust the width as needed */
+  height: 20px; /* Adjust the height as needed */
+  background-image: linear-gradient(to right, green, yellow, red);
+}
+
+.legend-labels {
+  display: flex;
+  justify-content: space-between;
+  width: 200px; /* Adjust the width as needed */
+  margin-top: 5px; /* Adjust the margin as needed */
+}
+
+.legend-item {
+  font-size: 14px;
+  color: #000;
+}

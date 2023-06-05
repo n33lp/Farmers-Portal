@@ -1,0 +1,89 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Upload</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/Upload.css' %}">
+  <style>
+    .info-msg {
+      margin: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      border-radius: 3px;
+      color: #059;
+      background-color: #BEF;
+      display: inline-block;
+      font-family: "Poppins", sans-serif;
+    }
+ 
+
+    </style>
+</head>
+<body>
+    {% if messages %}
+    <div class="info-msg">
+        {% for message in messages %}
+        <h5{% if message.tags %} class="{{message.tags}}" {% endif %}> {{ message }}</h5>
+        {% endfor %}
+    </div>
+{% endif %}
+
+    <h1>Data Upload</h1>
+    <div class="container">
+        <div class="box">
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="group">
+                    <input type="text" name="first_name" required="required"/><span class="highlight"></span><span class="bar"></span>
+                    <label>Customer's First Name</label>
+                </div>
+
+                <div class="group">
+                    <input type="text" name="last_name" required="required"/><span class="highlight"></span><span class="bar"></span>
+                    <label>Customer's Last Name</label>
+                </div>
+
+                <div class="group">
+                    <input type="text" name="email" required="required"/><span class="highlight"></span><span class="bar"></span>
+                    <label>Customer's Email</label>
+                </div>
+
+                <div class="group">
+                    <input type="text" name="phone_number" required="required" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" /><span class="highlight"></span><span class="bar"></span>
+                    <label>Customer's Phone Number</label>
+                </div>
+
+                <div class="upload-group">
+                    <input type="file" id="csvFileInput" name="csv_file" accept=".csv" required="required"/>
+                </div>
+
+                <div class="btn-box">
+                    <button class="btn btn-submit" type="submit" id="submit-btn">Submit</button>
+                    <button class="btn btn-cancel" type="button" id="cancel-btn">Cancel</button>
+                    <a href="/logout" class="btn btn-logout" type="button" >Logout</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          // Get the submit button element
+          var uploadForm = document.querySelector('form');
+          //var submitButton = document.getElementById('submit-btn');
+          var cancelBtn = document.getElementById('cancel-btn');
+          // Disable the submit button when clicked
+          submitButton.addEventListener('click', function() {
+            submitButton.disabled = true;
+            submitButton.innerText = 'Processing...'; // Optional: Update the button text
+          });
+          cancelBtn.addEventListener('click', function() {
+            uploadForm.reset();
+          });
+        });
+      </script>
+</body>
+</html>

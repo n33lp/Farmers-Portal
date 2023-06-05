@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&subset=greek-ext");
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/Users/neelpatel/Desktop/igem/FAP/Poppins/Poppins-Regular.ttf") format("truetype"); /* Path to Open Sans Regular font file */
+} 
+
+h1 {
+  font-family: "Poppins", sans-serif; /* Use Poppins as the first choice */
+  text-align: center;
+  padding-top: 2%;
+  font-size: 90px;
+} 
+
+body {
+  background-image: url('../images/wheat_close_up.jpeg');
+  background-position: center;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  font-family: "Noto Sans", sans-serif;
+  margin: 0; /* Reset default margin */
+  padding: 0; /* Reset default padding */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content at the top */
+  align-items: center;
+  height: 100vh; /* Set container height to full viewport height */
+}
+
+.text-center {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 23px;
+  margin: 0;
+  display: block;
+  text-align: center;
+  padding-top: 20px; /* Add padding to create space at the top */
+}
+
+.box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(50, 50, 50, 0.89);
+  border-radius: 3px;
+  padding: 70px 100px;
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-container label {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-size: 16px;
+  color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+
+.input-container input {
+  border: 0;
+  border-bottom: 1px solid #555;
+  background: transparent;
+  width: 100%;
+  padding: 8px 0 5px 0;
+  font-size: 16px;
+  color: #fff;
+}
+
+.input-container input:focus {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #e74c3c;
+}
+
+.btn {
+  color: #fff;
+  background-color: #e74c3c;
+  outline: none;
+  border: 0;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  margin-top: 50px;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+}
+
+.input-container input:focus ~ label,
+.input-container input:valid ~ label {
+  top: -12px;
+  font-size: 12px;
+}
+
+input {
+  display: block;
+  outline: none;
+  color: #fff;
+  margin: 2em auto;
+  border: none;
+  padding: 0;
+  width: 10.5ch;
+  background: repeating-linear-gradient(90deg, dimgrey 0, dimgrey 1ch, transparent 0, transparent 1.5ch) 0 100%/10ch 2px no-repeat;
+  font: 5ch droid sans mono, consolas, monospace;
+  letter-spacing: 0.5ch;
+}
+
+button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}

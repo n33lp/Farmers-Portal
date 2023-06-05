@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FungiLink Employee</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/employee.css' %}">
+</head>
+<body>
+  <div class="container">
+    <h1>FungiLink Employee Login</h1>
+    <div class="box">
+      <form method="POST" action="{% url 'login' %}">
+        {% csrf_token %}
+        <div class="input-container">
+          <input type="text" name="username" required="">
+          <label>Username</label>		
+        </div>
+        <div class="input-container">		
+          <input type="password" name="password" required="">
+          <label>Password</label>
+        </div>
+        <button type="submit" class="btn">Submit</button>
+      </form>	
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,218 @@
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+body {
+  background: #ffffff;
+  overflow-y: scroll;
+  }
+
+a {
+  font-family: "Poppins", sans-serif;
+}
+form {
+  width: 320px;
+  margin: 45px auto;
+}
+
+form h1 {
+  font-size: 3em;
+  font-weight: 300;
+  text-align: center;
+  color: #ffffff;
+}
+
+form hr.sep {
+  background: #2196F3;
+  box-shadow: none;
+  border: none;
+  height: 2px;
+  width: 25%;
+  margin: 0px auto 45px auto;
+}
+
+.group {
+  position: relative;
+  margin: 45px 0;
+}
+
+textarea {
+  resize: none;
+}
+
+input,
+textarea {
+  background: none;
+  color: #c6c6c6;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 320px;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #c6c6c6;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+input:focus ~ label,
+input:valid ~ label,
+textarea:focus ~ label,
+textarea:valid ~ label {
+  top: -14px;
+  font-size: 12px;
+  color: #2196F3;
+}
+
+input:focus ~ .bar:before,
+textarea:focus ~ .bar:before {
+  width: 320px;
+}
+
+input[type=file] {
+  color: #c6c6c6;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 320px;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #c6c6c6;
+  background: none;
+}
+
+label {
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 300ms ease all;
+}
+
+.bar {
+  position: relative;
+  display: block;
+  width: 320px;
+}
+
+.bar:before {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 0px;
+  position: absolute;
+  background: #2196F3;
+  transition: 300ms ease all;
+  left: 0%;
+}
+
+.btn {
+  font-family: "Poppins", sans-serif;
+  background: #2196F3;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.btn:hover {
+  color: #000000;
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.18), 0 5px 5px rgba(0, 0, 0, 0.12);
+}
+
+.btn-generate {
+  display: block;
+  width: 320px;
+  margin: 0 auto;
+  background-color: #2196F3;
+  color: #fff;
+  margin-top: 45px;
+}
+
+.btn-submit {
+  width: 140px;
+
+}
+.btn-cancel {
+  width: 140px;
+}
+
+.btn-box {
+  text-align: center;
+  display: flex;
+  justify-content: space-between; /* Add space between buttons */
+  gap: 10px; /* Adjust the desired space between buttons */
+}
+
+.upload-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 45px;
+}
+
+.upload-group label {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+/* Additional Styles for Reference Key */
+
+#referenceKey {
+  background: none;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 320px;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #ffffff;
+  pointer-events: none;
+}
+
+.box {
+  width: fit-content;
+  background-color: rgba(50, 50, 50, 0.89);
+  border-radius: 3px;
+  padding-bottom: 2%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.container {
+  display: grid;
+  place-items: center; /* Center both horizontally and vertically */
+  }
+
+
+body {
+  background: #ffffff;
+  overflow-y: scroll;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+
